@@ -1,48 +1,51 @@
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
 -- Clipboard Settings
-    vim.keymap.set({"n", "v"} , "d", "\"_d") -- delete to black hole register
-    vim.keymap.set({"n", "v"}, "x", "\"_x")
+keymap({"n", "v"} , "d", "\"_d", opts) -- delete to black hole register
+keymap({"n", "v"}, "x", "\"_x", opts)
 
-    vim.keymap.set({"n", "v"} , "<leader>d", "d") -- delete to unnamed register
+keymap({"n", "v"} , "<leader>d", "d", opts) -- delete to unnamed register
 
-    vim.keymap.set("v", "p", "\"_dP")
-    vim.keymap.set("v", "<leader>p", "p")
+keymap("v", "p", "\"_dP", opts)
+keymap("v", "<leader>p", "p", opts)
 
 -- Keep the cursor centered when half page scrolling
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 
 -- Keep search terms in the middle
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 
 -- Select all
-vim.keymap.set("n", "<C-a>", "ggVG")
+keymap("n", "<C-a>", "ggVG", opts)
 
 -- Retain selected contents when indenting
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 
 -- Better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Insert new line in normal mode
-vim.keymap.set("n", "<CR>", "o<Esc>") 
+keymap("n", "<CR>", "o<Esc>", opts) 
 
 -- move selection in visual mode
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Resize with arrows
-vim.keymap.set("n", "<C-Up>", ":resize -2<CR>")
-vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Save file
-vim.keymap.set("n", "<leader>s", ":w<CR>") 
+keymap("n", "<leader>s", ":w<CR>", opts) 
 
 -- Open file explorer
-vim.keymap.set("n", "<leader>e", ":Ex<CR>") 
+keymap("n", "<leader>e", ":Ex<CR>", opts) 

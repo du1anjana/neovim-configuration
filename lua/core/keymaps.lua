@@ -49,3 +49,6 @@ keymap("n", "<leader>s", ":w<CR>", opts)
 
 -- Open file explorer
 keymap("n", "<leader>e", ":Ex<CR>", opts) 
+
+-- Open file explorer
+keymap("i", "{", "{}<left>", opts) 

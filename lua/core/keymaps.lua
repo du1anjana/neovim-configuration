@@ -10,9 +10,9 @@ keymap({"n", "v"} , "<leader>d", "d", opts) -- delete to unnamed register
 keymap("v", "p", "\"_dP", opts)
 keymap("v", "<leader>p", "p", opts)
 
--- Keep the cursor centered when half page scrolling
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
+-- Keep the cursor centered when half page scrolling + remap
+keymap("n", "<C-j>", "<C-d>zz", opts)
+keymap("n", "<C-k>", "<C-u>zz", opts)
 
 -- Keep search terms in the middle
 keymap("n", "n", "nzzzv", opts)
@@ -24,12 +24,6 @@ keymap("n", "<C-a>", "ggVG", opts)
 -- Retain selected contents when indenting
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
-
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Insert new line in normal mode
 keymap("n", "<CR>", "o<Esc>", opts) 

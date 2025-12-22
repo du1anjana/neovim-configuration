@@ -41,5 +41,3 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Save file
 keymap("n", "<leader>s", ":w<CR>", opts) 
 
--- Open file explorer
-keymap("i", "{", "{}<left>", opts) 

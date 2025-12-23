@@ -41,3 +41,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Save file
 keymap("n", "<leader>s", ":w<CR>", opts) 
 
+-- Quit
+keymap("n", "<leader>q", ":q<CR>", opts) 
+
